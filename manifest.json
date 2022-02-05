@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube Video Speed",
+  "version": "0.0.1",
+
+  "permissions": ["activeTab", "tabs", "storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch?v=*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
